@@ -74,7 +74,8 @@ python manage.py createsuperuser
 # Run server
 python manage.py runserver
 
-##📊 Usage
+```
+##  📊 Usage 
 # 1. Open your browser
 # 2. Go to the live site: https://cityxplore.onrender.com/
 # 3. Sign up or log in
