@@ -8,7 +8,9 @@
 
 ---
 
-## 🌐 Demo
+## 🌐 Live Demo
+
+Check out the live application here: [CityXplore Live](https://cityxplore.onrender.com/)  
 
 ### Dashboard
 ![Dashboard Demo](static/images/demo-dashboard.gif)  
@@ -48,7 +50,7 @@
 
 ---
 
-## 🚀 Installation
+## 🚀 Installation (Optional Local Version)
 
 ```bash
 # Clone the repository
