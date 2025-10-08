@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<style>
+    .form-control
+    {
+    margin-bottom:8px;
+    border:none;
+    border-bottom:1px solid #009688;
+    }
+    .gd
+{
+    animation:fadeOutUpAnimation ease 3s;
+    animation-iteration-count:1;
+    animation-fill-mode:forwards;
+}
+@keyframes fadeOutUpAnimation{
+    0%{
+    opacity:0;
+    }
+    100%
+    {
+    opacity:1;
+    }
+    }
+</style>
+<div class="row gd">
+    <div class="h2 gd" style="margin-left:500px;margin-top: 20px;margin-bottom: 10px;">Register with US<b class="text-info"><i class="fa fa-users" style="color: #009688;"></i></b></div>
+    <p class=gd style="margin-left:410px ;margin-bottom: 20px;">You are just one step behind to join us . I promise you to give my best.</p>
+    <div class="col-sm-2"></div>
+    <div class="col-sm-8 p-5 bg-light " style="border: 3px solid #009688;border-radius: 50px;margin-bottom: 20px;">
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            Full Name <input type="text" class="form-control" placeholder="Enter your name.." name="name"/>
+            Email <input type="email" class="form-control" placeholder="Enter your email.." name="email"/>
+            Phone <input type="number" class="form-control" placeholder="Enter your contact number.." name="mobile"/>
+            Parmanent Address<input type="text" class="form-control" placeholder="Enter your email.." name="paddre"/>
+            Where To<input type="text" class="form-control" placeholder="Enter your Destination." name="where"/>
+            Arrivals<input type="date" class="form-control"  name="arri"/>
+            How Many<input type="number" class="form-control"  name="howmany"/>
+            Leaving<input type="date" class="form-control"  name="leaving"/>
+            
+            Profile picture<input type="file" class="form-control" name="fu"/>
+            Message
+            <textarea class="form-control" name="msj"></textarea>
+            <input type="submit" value="Send" class="btn btn-warning" style="background:#009688;color:white;margin: 5px;border: none;">
+        </form>
+    </div>
+    <div class="col-sm-2"></div>
+</div>
+{% endblock %}

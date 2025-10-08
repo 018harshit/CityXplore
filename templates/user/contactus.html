@@ -1,0 +1,90 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<style>
+    .form-control
+    {
+    margin-bottom:8px;
+    border:none;
+    border-bottom:1px solid #009688;
+    }
+    .gd
+{
+    animation:fadeOutUpAnimation ease 3s;
+    animation-iteration-count:1;
+    animation-fill-mode:forwards;
+}
+@keyframes fadeOutUpAnimation{
+    0%{
+    opacity:0;
+    }
+    100%
+    {
+    opacity:1;
+    }
+    }
+</style>
+<div class="row">
+     <h2 class="h1-responsive font-weight-bold text-center my-4 gd">Contact <b style="color:#009688;">Us<i class="fa fa-phone"></i></b></h2>
+    <!--Section description-->
+    <p class="text-center w-responsive mx-auto mb-5 gd">Do you have any questions? Please do not hesitate to contact us directly.<br> Our team will come back to you within
+        a matter of hours to help you.</p>
+
+    <div class="col-sm-1"></div>
+    <div class="col-sm-10 bg-light ">
+        <div class="row">
+            <div class="col-sm-7 gd">
+                <center>
+                <span><img src="{% static 'images/Contactus.png' %}" style="height:300px;width:300px;border-radius:50%;
+                margin:100px" class="d-block text-center" alt="..."></span>
+                </center>
+            </div>
+            <div class="col-sm-5 p-5 gd" >
+                <form method="post" autocomplete="off">
+                    {% csrf_token %}
+                    {% if S %}
+                    <div class="alert alert-success">
+                        <i>We Got your message....</i>
+                    </div>
+                    {% endif %}
+               Name <input type="text" class="form-control" placeholder="Enter your name.." name="name" required />
+               Email <input type="email" class="form-control" placeholder="Enter your email.." name="email" required/>
+               Contact No <input type="number" class="form-control" placeholder="Enter your mobile no.." name="mobile" required/>
+                Message<textarea class="form-control" name="msg" required></textarea>
+                <input type="submit" value="Send Message" class="btn btn-info" style="background:#009688;color:white;">
+                </form>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="col-sm-1"></div>
+</div>
+<div class="row">
+    <!--Section: Contact v.2-->
+<section class="mb-4">
+    <div class="row">
+       <div class="col-md-4"></div>
+        <div class="col-md-4 text-center" data-aos="fade-up">
+            <ul class="list-unstyled mb-0">
+                <li><i class="fa fa-map-marker fa-2x"></i>
+                    <p>Street: 12, N D Market, Pitampura Delhi</p>
+                </li>
+                <li><i class="fa fa-phone mt-4 fa-2x"></i>
+                    <p>+ 01 8174007231</p>
+                </li>
+
+                <li><i class="fa fa-envelope mt-4 fa-2x"></i>
+                    <p>tourguide@gmail.com</p>
+                </li>
+            </ul>
+        </div>
+        <div class="col-md-4"></div>
+        <!--Grid column-->
+
+    </div>
+
+</section>
+<!--Section: Contact v.2-->
+</div>
+{% endblock %}

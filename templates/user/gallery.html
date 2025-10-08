@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<style>
+.box:hover
+{
+transform:scale(1.1);
+transition:all ease 1s;
+}
+</style>
+<div class="row">
+    <h2 class="text-center mt-2 mb-2">Our <b style="color:#009688">Gallery</b></h2>
+    {% if gallery %}
+    {% for x in gallery %}
+    <div class="col-sm-3 mt-3">
+        <div class="card w-100 box">
+  <img src="/{{x.picture}}" class="card-img-top" alt="...">
+  <div class="card-body" style="height:40px;padding:0px;">
+    <p class="card-text m-1 text-center fs-5">{{x.pdes}}</p>
+  </div>
+</div>
+    </div>
+    {% endfor %}
+    {% endif %}
+</div>
+{% endblock %}

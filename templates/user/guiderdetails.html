@@ -1,0 +1,98 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<style>
+.gd
+{
+    animation:fadeOutUpAnimation ease 3s;
+    animation-iteration-count:1;
+    animation-fill-mode:forwards;
+}
+@keyframes fadeOutUpAnimation{
+    0%{
+    opacity:0;
+    }
+    100%
+    {
+    opacity:1;
+    }
+    }
+</style>
+<div class="row ">
+<div class="col-sm-2"></div>
+<div class="col-sm-8">
+    <div class="card mb-3">
+  <img src="{% static 'images/sd2.jpg' %}" class="card-img-top gd img-thumbnail" alt="..." style="height:300px;">
+  <div class="card-body">
+    <h5 class="card-title gd">Our team of tour guides in india</h5>
+    <p class="card-text gd">We love india and excited to share it with you.We currently have a dedicated team of guiders
+    who look forward to helping you discover the authentic India,your way.</p>
+  </div>
+</div>
+</div>
+<div class="col-sm-2"></div>
+</div>
+<center>
+<div class="row text-center" style="padding-left:300px;">
+    Where’s your next destination ?<br>
+Choose the Tour Guide for your next visits.
+You can access the places of your next trips via the menu<br>
+or discover the list of all our tourist guides by clicking on the thumbnails below.
+</div>
+</center>
+<hr>
+<div class="row">
+    <div class="col-sm-1"></div>
+    <div class="col-sm-10">
+        <div class="row">
+            <div class="col-sm-10">
+                <div class="row">
+                    {% if guider%}
+                    {% for x in guider%}
+                    <div class="card mb-3" style="max-width: 1100px;border:none;">
+  <div class="row g-0" data-aos="fade-up">
+    <div class="col-md-4">
+      <img src="/{{x.guiderpic}}" class="img-fluid rounded-start img-thumbnail" alt="..." >
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+    <p class="card-text">
+        <b>Name</b>:{{x.name}}<br>
+        <span class="card-title">{{x.city}},India</span><br>
+        <hr>
+        <b>Qualification</b>:{{x.qualification}}<br>
+        <b>Mobile</b>:{{x.mobile}}<br>
+        <b>Address</b>:{{x.address}}<br>
+    </p>
+      </div>
+    </div>
+  </div>
+</div>
+                    <hr>
+                    {% endfor%}
+                    {% endif %}
+                </div>
+            </div>                  <!--   --->
+            <div class="col-sm-2">
+                <div class="card" style="width: 18rem;">
+  <div class="card-header" style="background:black;color:white">
+      CITY
+  </div>
+   <ul class="list-group">
+                    {% if city %}
+                    {% for x in city %}
+                    <a href="/user/guiderdetails/?abc={{x.id}}" style="text-decoration:none;"><li data-aos="fade-up" class="list-group-item">{{x.cname}}</li></a>
+                    {% endfor %}
+                    {% endif %}
+                    <a href="/user/guiderdetails" style="text-decoration:none;"><li class="list-group-item">All City Guider</li></a>
+</ul>
+</div>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-1"></div>
+</div>
+
+<!-- rounded image -->
+
+{% endblock %}

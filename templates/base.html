@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Title</title>
+    <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet"/>
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="{% static 'js/bootstrap.js' %}"></script>
+   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link href="{% static 'css/font-awesome.css' %}" rel="stylesheet"/>
+
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js"></script>
+    <style>
+    body
+    {
+    overflow-x:hidden;
+    }
+        .t
+        {
+        min-height:35px;
+        text-align:center;
+        }
+        .ic
+        {
+        color:#009688;
+        border:1px solid #009688;
+        height:25px;
+        width:25px;
+        padding:3px;
+        border-radius:2px;
+        }
+        .ic:hover
+        {
+        background:#009688;
+        color:white;
+        transition:all ease 1s;
+        transform:rotate(360deg);
+        }
+        .header1
+        {
+        min-height:55px;
+        }
+        .menu
+        {
+        min-height:45px;
+        background:#009688;
+        }
+        #menu ul li a
+        {
+        color:white;
+        font-size:18px;
+        }
+        #menu ul li a:hover
+        {
+         color:#009688;
+         background:white;
+         border-radius:5px;
+         transition:all ease 1s;
+        }
+        .newproduct
+        {
+        min-height:500px;
+        }
+        .gallary
+        {
+        min-height:300px;
+        }
+        .services
+        {
+        min-height:250px;
+        }
+        .ufooter
+        {
+        min-height:250px;
+        background:#c1c1c1;
+        padding-left:70px;
+        padding-top:20px;
+        }
+        .bfooter
+        {
+        min-height:40px;
+        margin:1px;
+        background:#009688;
+        line-height:40px;
+        }
+        .a
+        {
+        background:#009688;
+        color:white;
+        }
+        h4
+        {
+        color:#009688;
+        }
+        #btn
+        {
+        background:#009688;
+        border:none;
+        border-radius:2px;
+        height:40px;
+        width:150px;
+        margin:20px;
+        color:white;
+        }
+        #btn:hover
+        {
+        background:white;
+        color:#009688;
+        }
+    </style>
+</head>
+<body>
+<div class="container-fluid outer">
+    <div class="row t border-bottom pt-1 bg-light ">
+        <div class="col-sm-4 border-end">
+            <i class="fa fa-phone ic"></i>+91-6306076225
+        </div>
+        <div class="col-sm-4 border-end">
+          Travel in 2025
+        </div>
+        <div class="col-sm-4">
+            <i class="fa fa-facebook  ic"></i>
+            <i class="fa fa-whatsapp ic" title="7307951102"></i>
+            <i class="fa fa-instagram  ic"></i>
+            <i class="fa fa-youtube  ic"></i>
+        </div>
+    </div>
+    <div class="row header py-2">
+            <div class="col-sm-1"></div>
+            <div class="col-sm-2 fs-2">
+               City<b style="color:#009688;">Xplore<i class="fa fa-plane"></i></b>
+            </div>
+            <div class="col-sm-8" style="padding-top:10px;">
+<marquee class="news-scroll" behavior="scroll" direction="left" onmouseover="this.stop();" onmouseout="this.start();" scrollamount="8">
+    <a href="#" style="text-decoration:none;font-size:20px;color:black">India Tours offers a chance to explore its biodiversity in the country's
+        many national parks and wildlife reserves. </a>  </marquee>
+            </div>
+            <div class="col-sm-1"></div>
+    </div>
+    <!-- START MENU -->
+        <div class="row menu">
+            <!-- <div class="col-sm-1"></div> -->
+            <div class="col-sm-11" style="padding-left:150px;">
+                <nav class="navbar navbar-expand-lg navbar-light" id="menu">
+  <div>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/user/home/"><i class="fa fa-home"></i> Home</a>
+        </li>
+          <li class="nav-item">
+          <a class="nav-link" href="/user/about/"><i class="fa fa-address-card"></i> About Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/user/newplaces/"><i class="fa fa-arrow-circle-right "></i> All Places</a>
+        </li>
+          <li class="nav-item">
+          <a class="nav-link" href="/user/guiderdetails/"><i class="fa fa-info-circle "></i> Guider details</a>
+        </li>
+
+          <li class="nav-item">
+          <a class="nav-link" href="/user/contactus/"><i class="fa fa-sign-in"></i> Contact Us</a>
+        </li>
+          <li class="nav-item">
+          <a class="nav-link" href="/user/gallery/"><i class="fa fa-photo"></i> Gallery</a>
+        </li>
+          <li class="nav-item">
+          <a class="nav-link" href="/user/videos/"><i class="fa fa-video-camera"></i> Videos</a>
+        </li>
+          <li class="nav-item">
+          <a class="nav-link" href="/admin/"><i class="fa fa-arrow-circle-right "></i>Admin Login</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/user/signin/"><i class="fa fa-arrow-circle-right "></i>Registration</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+            </div>
+<!-- END MENU -->
+            <div class="col-sm-1"></div>
+        </div>
+    <div class="row content" style="min-height:500px;">
+        <div class="col-sm-12">
+        {% block content %}
+        {% endblock %}
+            </div>
+    </div>
+    <div class="row services">
+    <div class="col-md-12 ufooter">
+        <div class="row">
+                 <div class="col-md-3" >
+            <h4>ContactAddress</h4>
+            <span class="fa fa-map-marker"></span><span>Street:  12, N D Market, Pitampura<br>
+City:   Delhi<br>
+State/province/area : Delhi<br>
+Phone number : 01125216952<br>
+Zip code : 110034<br>
+                     Country : India
+                 </span><br>
+            <i class="fa fa-phone"></i>+91-6306076225<br>
+            <i class="fa fa-phone"></i>+91-6306076225<br>
+        </div>
+        <div class="col-md-3">
+            <h4 style="padding-left:50px;">Information</h4>
+           <a href="/user/home/" style="text-decoration:none;color:#21252b;padding-left:50px;">Home</a><br>
+           <a href="/user/contactus/" style="text-decoration:none;color:#21252b;padding-left:50px;">ContactUs</a><br>
+           <a href="/user/newplaces/" style="text-decoration:none;color:#21252b;padding-left:50px;">New Places</a><br>
+           <a href="/user/guiderdetail/" style="text-decoration:none;color:#21252b;padding-left:50px;">Guider Detail</a><br>
+           <a href="/user/abloutus/" style="text-decoration:none;color:#21252b;padding-left:50px;">About Us</a>
+
+        </div>
+        <div class="col-md-3">
+            <h4 style="padding-left:50px;">My Account</h4>
+            <a href="#" style="text-decoration:none;color:#21252b;padding-left:50px;">MyAccount</a><br>
+           <a href="#" style="text-decoration:none;color:#21252b;padding-left:50px;">Login/Register</a><br>
+           <a href="#" style="text-decoration:none;color:#21252b;padding-left:50px;">Place Category</a><br>
+           <a href="#" style="text-decoration:none;color:#21252b;padding-left:50px;">Most Visit</a><br>
+           <a href="#" style="text-decoration:none;color:#21252b;padding-left:50px;">About monsoon In india</a>
+        </div>
+        <div class="col-md-3 ps-5">
+           <h4>Contact With Us</h4>
+            <a href="#" style="text-decoration:none;color:#21252b;padding-bottom:200px;"><i class="fa fa-instagram ic"></i></a><br>
+           <a href="#" style="text-decoration:none;color:#21252b;"><i class="fa fa-facebook ic"></i></a><br>
+           <a href="#" style="text-decoration:none;color:#21252b;"><i class="fa fa-whatsapp ic"></i></a><br>
+           <a href="#" style="text-decoration:none;color:#21252b;"><i class="fa fa-phone ic"></i></a><br>
+        </div>
+        </div>
+    </div>
+    <div class="row bfooter container-fluid ">
+        <div class="col-sm-8">
+            <i class="fa fa-copyright"></i> 2025 <b style="color:white;">City Xplore</b> | <b style="color:white;">Developed By Harshit Chaudhary </b>
+        </div>
+        <div class="col-sm-4">
+            <a href="#"><b style="color:white;font-size:20px;" class="fa fa-envelope">harshitchaudhary2608@gmail.com</b></a>
+        </div>
+    </div>
+</div>
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+  AOS.init({
+  offset:300,
+  duration:800,
+  });
+</script>
+</div>
+</body>
+</html>

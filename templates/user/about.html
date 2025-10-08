@@ -1,0 +1,131 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<style>
+   .gd
+  {
+    animation:fadeOutUpAnimation ease 3s;
+    animation-iteration-count:1;
+    animation-fill-mode:forwards;
+  }
+@keyframes fadeOutUpAnimation{
+    0%{
+    opacity:0;
+    }
+    100%
+    {
+    opacity:1;
+    }
+    }
+</style>
+<div class="h2 text-center mt-2 mb-2">About <b style="color:#009688">Us</b></div>
+<div class="row" style="min-height:300px;">
+    <!-- Background image -->
+<div class="bg-image d-flex justify-content-center align-items-center img-thumbnail" style="
+      background-image: url({% static 'images/so2.jpg' %});height:300px;background-size:cover;">
+  <h1 class="text-white text-center gd" style="margin:150px;">WE ASPIRE TO CHANGE THE CONCEPT OF TRAVELLING BY MAKING
+      IT MORE AUTHENTIC,MORE LOCAL.</h1>
+</div>
+<!-- Background image -->
+</div>
+<div class="row p-5 bg-light" data-aos="fade-up">
+       <div class="col-sm-7 bg-white" >
+           <i class="fa fa-quote-left" style="font-size:60px;color:#009688;"></i>
+           <p>
+               Tourism in India has shown a phenomenal growth in the past decade. One of the reasons is that the
+               Ministry of tourism, India has realized the immense potential of tourism in India during vacations.
+               India travel tourism has grown rapidly with a great influx of tourists from all across the globe who
+               have been irresistibly attracted to the rich culture, heritage, and incredible natural beauty of India.
+               India tourism with its foggy hill stations, captivating beaches, historical monuments, golden deserts,
+               serene backwaters, pilgrimage sites, rich wildlife, and colourful fairs capture the heart of every
+               tourist. In addition, a variety of festivals, lively markets, vibrant lifestyle, and traditional Indian
+               hospitality, will make your experience as an india tourist truly unforgettable and fantastic. Travel
+               through the lovely Indian states and discover closely the resplendent colors and rich cultural locales
+               of this incredible land. Our India tourism guide provides you a glimpse of travel and tourism in india ,
+               india tourism information about south india tourism, north India tourism, and all the major tourist
+               destinations,
+           </p>
+       </div>
+       <div class="col-sm-5"style="padding-100px">
+          <img src="{% static 'images/ab.jpg' %}" class="img-thumbnail" style="height:350px;width:350;margin:50px
+               " class="d-block text-center" alt="...">
+       </div>
+    </div>
+<div class="row bg-light" style="min-height:300px;padding-bottom:55px;" data-aos="fade-up">
+    <div class="col-sm-1"></div>
+    <div class="col-sm-10">
+        <div class="row">
+            <div class="col-sm-5 mt-5" >
+                <img src="{% static 'images/sldr4.jpg' %}" class="img-thumbnail"  style="height:300px;">
+            </div>
+            <div class="col-sm-7 p-5 bg-white">
+                A tour guide works in a variety of places such as museums, historical landmarks, cities,
+                and other areas that are of interest to tourists. They educate a group of people on the culture
+                and heritage of the topics on their tour. They may deliver several tours a day to different groups or
+                may provide one, larger tour for one particularOur dedicated travel team diligently works round-the-clock to design the best travel experiences for the
+customers. The skilled team spends considerable amounts of time ideating tour packages that guarantee to
+ make travelling with us an experience like no other. We select the finest hotels in every category, boast
+ an excellent personal fleet of vehicles for transportation.<br>
+                <i class="fa fa-quote-right" style="color:#009688;font-size:60px;"></i>
+
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-1"></div>
+</div>
+<div class="row" style="margin-top:40px">
+    <u style="color:gray"><h2 class="text-center"  data-aos="fade-up">WHAT YOU GET WITH US</h2></u>
+    <div class="col-sm-1"></div>
+    <div class="col-sm-10"  data-aos="fade-in">
+    <div class="row" style="margin-left:25px;">
+    <div class="col-sm-2">
+        <div class="card" style="width:200px;margin-right:30px;border:none;">
+  <img src="{% static 'images/s2.png' %}" class="card-img-top" alt="..." style="height:100px;width:100px;">
+  <div class="card-body">
+      <h6>DAILY TOURS</h6>
+
+  </div>
+</div>
+    </div>
+     <div class="col-sm-2">
+        <div class="card" style="width:200px;margin-left:30px;border:none;border:none;">
+  <img src="{% static 'images/bus.png' %}" class="card-img-top" alt="..." style="height:100px;width:100px">
+  <div class="card-body">
+      <h6>BUS TOURS</h6>
+
+  </div>
+</div>
+    </div>
+     <div class="col-sm-2">
+        <div class="card" style="width:200px;margin-left:60px;border:none;">
+  <img src="{% static 'images/s5.png' %}" class="card-img-top" alt="..." style="height:100px;width:100px">
+  <div class="card-body">
+      <h6>7 DAYS SUPPORT</h6>
+
+  </div>
+</div>
+    </div>
+     <div class="col-sm-2">
+        <div class="card" style="width:200px;margin-left:90px;border:none;">
+  <img src="{% static 'images/s6.png' %}" class="card-img-top" alt="..." style="height:100px;width:100px">
+  <div class="card-body">
+      <h6>NEW DESTINATIONS</h6>
+
+  </div>
+</div>
+    </div>
+     <div class="col-sm-2">
+        <div class="card" style="width:200px;margin-left:120px;border:none;">
+  <img src="{% static 'images/s7.png' %}" class="card-img-top" alt="..." style="height:100px;width:100px">
+  <div class="card-body">
+      <h6>CYCLING TRIPS</h6>
+  </div>
+</div>
+    </div>
+    </div>
+    </div>
+    <div class="col-sm-1"></div>
+</div>
+
+
+{% endblock %}

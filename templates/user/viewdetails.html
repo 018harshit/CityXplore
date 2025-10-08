@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<style>
+    .gd
+{
+    animation:fadeOutUpAnimation ease 3s;
+    animation-iteration-count:1;
+    animation-fill-mode:forwards;
+}
+@keyframes fadeOutUpAnimation{
+    0%{
+    opacity:0;
+    }
+    100%
+    {
+    opacity:1;
+    }
+    }
+</style>
+<div class="row">
+    <div class="h2 text-center gd">
+        Details <b sytle="color:#009688">About place</b></div>
+        <div class="col-sm-1"></div>
+        <div class="col-sm-10 m-5">
+            <div class="row">
+                {% if d %}
+                {% for x in d %}
+            <div class="col-sm-5">
+                <img src="/{{x.placepic}}" class="img-thumbnail gd" style="border-radius:5px;"/>
+            </div>
+            <div class="col-sm-7 gd">
+
+                <div class="h3 ">
+                    {{x.ptitle}}
+                </div>
+                <span class="fs-5">City:</span><span class="fs-5">{{x.city}}</span><br><br>
+                <p class="fs-6">{{x.pdes}}</p>
+
+                <i class="fs-4">Best about this place:<br></i><u class="fs-5"><i>{{x.baplace}}</i></u><br>
+                <span class="fs-4">Added date:</span><span class="fs-5">{{x.date}}</span>
+            </div>
+            </div>
+                {% endfor %}
+                {% endif %}
+        </div>
+        <div class="col-sm-1"></div>
+</div>
+
+{% endblock %}

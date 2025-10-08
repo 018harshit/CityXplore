@@ -1,0 +1,160 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<style>
+    img
+    {
+    transition:all ease 2s;
+    }
+    .ani
+    {
+    animation:fadeInAnimation ease 3s;
+    animation-iteration-count:1;
+    animation-fill-mode:forwards;
+    }
+    @keyframes fadeInAnimation{
+    0%{
+    opacity:0;
+    color:gray;
+    }
+    100%
+    {
+    opacity:1;
+    }
+    }
+    .anim
+    {
+    animation:fadeInAnimation ease 3s;
+    animation-iteration-count:1;
+    animation-fill-mode:forwards;
+    }
+    @keyframes fadeInAnimation{
+    0%{
+    opacity:0;
+    }
+    100%
+    {
+    opacity:1;
+    }
+    }
+</style>
+<!--Projects section v.4-->
+<section>
+    <!--Section heading-->
+    <h2 class="h1-responsive font-weight-bold text-center my-5 ani">Travel can improve your personality</h2>
+    <!-- Section description -->
+    <p class="grey-text text-center w-responsive mx-auto mb-5 ani">
+        Travel is the movement of people between distant geographical locations. Travel can be done by foot, bicycle,
+        automobile, train, boat, bus, airplane, ship or other means, with or without
+        luggage, and can be one way or round trip.
+    </p>
+
+    <!--Grid row-->
+    <div class="row mx-1">
+
+        <!--Grid column-->
+        <div class="col-md-12 mb-4">
+            <div class="card card-image anim" style="background-image: url('{% static 'images/so4.jpg' %}');background-size:cover;background-repeat:no-repeat;">
+                <div class="text-white text-center d-flex align-items-center rgba-black-strong py-5 px-4">
+                    <div>
+                        <h6 class="purple-text"><i class="fas fa-plane"></i><strong> Travel</strong></h6>
+                        <h3 class="card-title py-3 font-weight-bold"><strong>TRAVEL IN INDIA</strong></h3>
+                        <p class="pb-3">We are consistently working in travel sector with quality staff.
+                            We are continuously increasing towards success with positive feedback of our respective
+                            clients and smooth work structure. We offer.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-md-6 mb-4">
+            <div data-aos="fade-left" class="card card-image" style="background-image: url(https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/6-col/img%20%2873%29.jpg);margin-top:20px;">
+                <div class="text-white text-center d-flex align-items-center rgba-black-strong py-5 px-4">
+                    <div>
+                        <h6 class="pink-text"><i class="fas fa-chart-pie"></i><strong>tourism</strong></h6>
+                        <h3 class="card-title py-3 font-weight-bold"><strong>Why choose us?</strong></h3>
+                        <p class="pb-3">Our dedicated travel team diligently works round-the-clock to design the best
+                            travel experiences for the customers. The skilled team spends considerable amounts of
+                            time ideating tour in india best places</p>
+                        <a href="/user/about/" class="btn btn-primary rounded-pill  btn2 "
+                                   style="background:#009688;border:none;margin-top:0px;width:200px;">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-md-6 mb-4">
+            <div data-aos="fade-right" class="card card-image" style="background-image: url('{% static 'images/sldr6.jpg' %}');background-size:cover;">
+                <div class="text-white text-center d-flex align-items-center rgba-black-strong py-5 px-4">
+                    <div>
+
+                        <h3 class="card-title py-3 font-weight-bold"><strong>WELCOME IN INDIA</strong></h3>
+                        <p class="pb-3">If you are planning for some exciting time with your friends than this is one place which is a must visit for you.
+                            Simply gather your sacks and make tracks in an opposite direction from the hustle and bustle of daily life to this land which speaks of the ancient culture.
+With its glorious architecture of French style and now combined with modern day, this place boost of many places which is
+                            visited by all. Also known as Puducherry, this spot has numerous sun kissed shorelines which welcome you for a romantic getaway or to take a cruise or camp on the coastline.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Grid column-->
+
+    </div>
+    <!--Grid row-->
+
+</section>
+<!--Projects section v.4-->
+<div class="row">
+    <div class="col-sm-1"></div>
+    <div class="col-sm-10">
+        <div class="row">
+            <div class="col-sm-9">
+               {% if place %}
+                {% for x in place %}
+                <div class="row" data-aos="fade-up">
+                    <div class="col-sm-5">
+                        <img src="/{{x.placepic}}" class="img-thumbnail"/>
+                    </div>
+                    <div class="col-sm-7 fs-6">
+                       <h4 class="card-title">{{x.ptitle}}</h4>
+
+                        <hr>
+        <p class="card-text fs-6">{{x.pdes}}</p>
+
+                        <hr>
+                        <i class="text-muted">Posted Date:{{x.pdate}}</i>
+          <a href="/user/viewdetails/?msg={{x.id}}" class="btn btn-outline-dark w-300 btn2 "
+             style="margin-top:0px;">Read More</a><br>
+
+                    </div>
+                </div>
+                <hr class="text-dark">
+                {% endfor %}
+                {% endif %}
+            </div>
+            <div class="col-sm-3">
+                <div class="card" style="width: 18rem;">
+  <div class="card-header" style="background:black;color:white">
+      CITY
+  </div>
+   <ul class="list-group">
+                    {% if city %}
+                    {% for x in city %}
+                    <a href="/user/newplaces/?abc={{x.id}}" style="text-decoration:none;"><li data-aos="fade-up" class="list-group-item">{{x.cname}}</li></a>
+                    {% endfor %}
+                    {% endif %}
+                    <a href="/user/newplaces" style="text-decoration:none;"><li class="list-group-item">All data</li></a>
+</ul>
+</div>
+            </div>
+    </div>
+    </div>
+    <div class="col-sm-1"></div>
+</div>
+<div class="row" style="min-height:300px">
+</div>
+{% endblock %}

@@ -1,0 +1,228 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<style>
+    img:hover
+  {
+  transform:scale(1.1);
+  box-shadow:0px 0px 5px 5px #f1f1f1;
+  transition:all ease 1s;
+  }
+  .button
+  {
+  text-decoration:none;
+  height:35px;
+  width:200px;
+  display:block;
+  text-decoration:none;
+  }
+  carousel-caption{
+  height:100vh;
+  }
+  .carousel-caption{
+  bottom:200px;
+  }
+  .carousel-caption h5{
+  font-size:50px;
+  text-transform:uppercase;
+  letter-spacing:2px;
+  font-weight:900;
+  }
+  .carousel-caption p{
+  font-size:18px;
+  margin:auto;
+  width:60%;
+  line-height:1.9;
+  }
+  .carousel-caption a{
+  text-transform:uppercase;
+  background:darkorange;
+  padding:10px 30px;
+  display:inline block;
+  color:white;
+  margin-top:15px;
+  border-radius:50px;
+  text-decoration:none;
+  }
+  .filter:hover
+  {
+  filter:grayscale(100%);
+  }
+  #filter
+  {
+  background:black;
+  color:white;
+  border:none;
+  }
+  #filter:hover
+  {
+  background:white;
+  color:black;
+  border:1px solid black;
+  }
+  .slider
+  {
+  max-height:600px;
+  }
+</style>
+<!--startslider-->
+<div class="row slider">
+    <div class="col-sm-12 p-0">
+        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="{% static 'images/sli.jpg' %}" style="height:600px;max-width:100%;" class="d-block w-100 img-fluid"
+                         alt="First slide">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5 class="animated bounceInRight" style="animation-delay:1s;">India Tourism</h5>
+                        <p class="animated bounceInLeft" style="animation-delay:2s;">Explore India with Professional
+                            tour guides or with locals who are experts</p>
+                        <p class="animated bounceInLeft" style="animation-delay:3s;"><a href="/user/newplaces/">More info</a></p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="{% static 'images/sli2.jpg' %}" style="height:600px;max-width:100%;" class="d-block w-100 img-fluid"
+                         alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                       <h5 class="animated slideInDown" style="animation-delay:1s;">How Can We Help ?</h5>
+                        <p class="animated fadeInUp" style="animation-delay:2s;">Our guides Provide tours tailored to your needs. Contact Us today with any question!
+                        Contact Our Guides today with your questions.</p><br>
+                        <span class="animated zoomIn mt-5" style="animation-delay:3s;"><a href="/user/contactus/">Contact Us
+                        </a></span> <span class="animated zoomIn mt-5" style="animation-delay:3s;"><a href="/user/guiderdetails/">Find A Guider</a></span>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="{% static 'images/sli3.jpg' %}" style="height:600px;max-width:100%;" class="d-block w-100 img-fluid"
+                         alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5 class="animated zoomIn" style="animation-delay:1s;">About us</h5>
+                        <p class="animated fadeInLeft" style="animation-delay:2s;">We try to change the concept of travelling..</p>
+                        <p class="animated zoomIn" style="animation-delay:3s;"><a href="/user/aboutus/">More info</a></p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                    data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                    data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+</div>
+<!-- END SLIDER -->
+<div class="row">
+    <div class="alert alert-success">
+        <marquee>
+        {% if notification %}
+        {% for x in notification %}
+            <img src=" "/>{{x.ndes}}
+        {% endfor %}
+        {% endif %}
+        </marquee>
+    </div>
+</div>
+<!--start category-->
+<div class="row category" style="min-height:200px;">
+    <div class="col-sm-1"></div>
+    <div class="col-sm-10 py-3">
+        <div class="row">
+           <!-- DYNAMIC CATEGORY-->
+            {% if data %}
+            {% for x in data %}
+            <div class="col-sm-3" style="background:url(/{{x.cpic}});background-size:cover;height:200px;border-radius:5px;">
+                 <div style="background:rgba(0,0,0,0.2);height:200px;padding-top:140px;padding-left:30px;">
+                     <a href="/user/newplaces/?abc={{x.id}}"><div class=" text-center button btn btn-outline-light">{{x.cname}}</div></a>
+                 </div>
+            </div>
+            {% endfor %}
+            {% endif %}
+            <!--END OF DYNAMIC CATEGORY-->
+        </div>
+    </div>
+    <div class="col-sm-1"></div>
+</div>
+<!--end category-->
+<!-- start newproduct -->
+<div class="row newproduct ps-2">
+    <div class="row" style="height:150px">
+    <h2 class="h2 text-center text-bold">Popular Destination <b style="color:#009688">In India</b></h2><br>
+     <p class="text-center " >India is an enormous and diverse destination. Bordered by Pakistan, China, Nepal, Bhutan, Sri Lanka, Bangladesh
+        and Myanmar, not to mention the Arabian Sea and the Bay of Bengal, means that there are many different sides
+        to the country.More than 20 official languages, multiple religions and a variety of cuisines exist within
+        India’s borders. To truly experience the breadth of Indian culture and history, travel is key. Head to as many
+        of these best places to visit in Indias as your itinerary allows.</p>
+    </div>
+        <div class="row ps-4">
+            {% if place %}
+            {% for x in place %}
+            <div class="col-sm-3 mt-5 filter" class="img-thumbnail" style="background:url(/{{x.placepic}});background-size:cover;height:250px;border-radius:5px;">
+                <div style="background:rgba(0,0,0,0.2);height:30px;color:white;text-align:center;"><b>{{x.sseen}}</b></div>
+                <div style="padding-top:200px;" >
+                    <a href="/user/viewdetails/?msg={{x.id}}" class="btn btn-primary w-100"
+                                    id="filter">Read More</a>
+                </div>
+            </div>
+                    {% endfor %}
+                    {% endif %}
+                </div>
+</div>
+<div class="gallary mt-5 p-5" style="background:#f8f9fa;" data-aos="fade-out-up">
+    <h1>Best time to travel India</h1>
+    Deciding when to travel to India can be complicated, due to its extremely varied weather. India’s seasons
+    are split into the wet, humid monsoon season, and the dry, cool season.<br>
+    The monsoon season takes place from May until September. It has a huge influence over travelling in India as it
+    works its way northeast through the country, from the Keralan coast. During this time the south still has a
+    couple of months of cloud, rain and humidity.<br>
+    Therefore, the best time to visit India is November to March, when the majority of the country is at a
+    comfortable temperature with good weather. Delhi, Agra, Rajasthan and Varanasi are perfect for a visit to
+    India in this period, while Goa and the centre of the country is a little cooler but still comfortable.<br>
+    The south can get very hot and while it’s always intense, the months of May and June are unbearable, so it’s
+    best to avoid them during this time of year - Kerala or Tamil Nadu are the best places to be January to March.<br>
+    If you’re looking to experience the Himalayas, the best time to go is from March onwards, with peak hiking
+    season in August and September - the rest of the country at this time is very wet. Find more detailed
+    information on when to go to India.
+</div>
+<div class="row" style="min-height:300px;margin-top:0px;">
+<div class="col-md-1"></div>
+    <div class="col-md-10">
+        <div class="row ">
+            <div class="col-md-7" p-2>
+               <img class="img-thumbnail" src="{% static 'images/happy.jpg' %}" height="300px" />
+            </div>
+            <div class="col-md-5" style="padding:80px;padding-top:120px;">
+                <p class="h1">
+                    Travels Makes You <b style="color:#009688;font-size:50px;">Happier</b>
+                </p>
+                <p>Travels Makes us happy,because it promises us the self-discovery needed to reach our destination</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-1"></div>
+</div>
+<div class="row bg-light" style="min-height:200px;padding:50px;margin-top:0px;" data-aos="fade-out-up">
+<p class="h2">How to travel around India</p>
+    <p style="margin-top:10px;">
+        Once in India, getting around is another thing to wrap your head around and requires some forward planning.
+        Intercity transport in India isn’t considered the most comfortable, quick or efficient, but it is affordable.
+        Wherever you need to go, there’s most likely a route there. The main options are train or bus, but also
+        occasionally plane or boat, and within cities, there are also rickshaws and metro systems.
+For longer distances, make use of the cheap long-distance trains, on which journeys are an experience in themselves.
+        If you’re willing to pay a little more for the higher classes of carriage, you can expect to have a reasonably
+        hassle-free and comfortable journey.
+    </p>
+</div>
+<!-- end newproduct -->
+{% endblock %}
