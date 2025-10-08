@@ -73,3 +73,36 @@ python manage.py createsuperuser
 
 # Run server
 python manage.py runserver
+
+# 1. Open your browser
+# 2. Go to the live site: https://cityxplore.onrender.com/
+# 3. Sign up or log in
+# 4. Explore cities and attractions
+# 5. Add favorite places to your plan
+# 6. Navigate cities using interactive maps
+
+
+# 1. Fork the repository
+# 2. Clone your fork
+git clone https://github.com/yourusername/CityXplore.git
+cd CityXplore
+
+# 3. Create a new branch
+git checkout -b feature/your-feature
+
+# 4. Make your changes and commit
+git commit -m "Add some feature"
+
+# 5. Push to your branch
+git push origin feature/your-feature
+
+# 6. Open a Pull Request on GitHub
+
+MIT License
+See LICENSE file
+
+
+Harshit Chaudhary
+ABES Engineering College, India
+Email: harshitchaudhary2608@gmail.com
+
