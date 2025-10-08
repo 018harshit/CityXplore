@@ -11,19 +11,19 @@
 ## 🌐 Demo
 
 ### Dashboard
-![Dashboard Demo](https://your-demo-gif-link.com/dashboard.gif)  
+![Dashboard Demo](static/images/demo-dashboard.gif)  
 *Explore featured cities and top tourist attractions*
 
 ### City Details
-![City Details Demo](https://your-demo-gif-link.com/city-details.gif)  
+![City Details Demo](static/images/demo-city-details.gif)  
 *View city information, maps, and top spots*
 
 ### Favorite Places
-![Favorites Demo](https://your-demo-gif-link.com/favorites.gif)  
+![Favorites Demo](static/images/demo-favorites.gif)  
 *Add and manage your favorite places*
 
 ### Interactive Map
-![Map Demo](https://your-demo-gif-link.com/map.gif)  
+![Map Demo](static/images/demo-map.gif)  
 *Navigate cities using interactive maps*
 
 ---
