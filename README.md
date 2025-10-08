@@ -76,6 +76,7 @@ python manage.py runserver
 
 ```
 ##  📊 Usage 
+```bash
 # 1. Open your browser
 # 2. Go to the live site: https://cityxplore.onrender.com/
 # 3. Sign up or log in
@@ -83,7 +84,9 @@ python manage.py runserver
 # 5. Add favorite places to your plan
 # 6. Navigate cities using interactive maps
 
+```
 ##🤝 Contributing
+```
 # 1. Fork the repository
 # 2. Clone your fork
 git clone https://github.com/yourusername/CityXplore.git
@@ -100,11 +103,15 @@ git push origin feature/your-feature
 
 # 6. Open a Pull Request on GitHub
 
+```
 ##📄 License
+```
 MIT License
 See LICENSE file
 
+```
 ##✉️ Contact
+```
 Harshit Chaudhary
 ABES Engineering College, India
 Email: harshitchaudhary2608@gmail.com
