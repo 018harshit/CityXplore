@@ -10,18 +10,31 @@
 
 ## 🌐 Demo
 
-![CityXplore Demo](https://your-demo-gif-link.com/demo.gif)  
-*Example of the CityXplore dashboard and city discovery features*
+### Dashboard
+![Dashboard Demo](https://your-demo-gif-link.com/dashboard.gif)  
+*Explore featured cities and top tourist attractions*
+
+### City Details
+![City Details Demo](https://your-demo-gif-link.com/city-details.gif)  
+*View city information, maps, and top spots*
+
+### Favorite Places
+![Favorites Demo](https://your-demo-gif-link.com/favorites.gif)  
+*Add and manage your favorite places*
+
+### Interactive Map
+![Map Demo](https://your-demo-gif-link.com/map.gif)  
+*Navigate cities using interactive maps*
 
 ---
 
 ## ⚡ Features
 
-- Explore cities, tourist spots, and local attractions  
-- Interactive maps and travel guides  
+- Browse cities, tourist spots, and local attractions  
+- Interactive maps with location details  
 - User authentication (Sign up, login, profile)  
-- Add favorite places and plan tours  
-- Responsive design for web and mobile  
+- Save favorite places and plan tours  
+- Responsive design for desktop and mobile  
 
 ---
 
@@ -31,14 +44,14 @@
 - **Backend**: Python, Django  
 - **Database**: SQLite / PostgreSQL  
 - **Maps & APIs**: Google Maps API / OpenStreetMap (optional)  
-- **Data Handling**: Pandas, JSON for API responses  
+- **Data Handling**: JSON, Pandas  
 
 ---
 
 ## 🚀 Installation
 
 ```bash
-# Clone the repo
+# Clone the repository
 git clone https://github.com/yourusername/CityXplore.git
 cd CityXplore
 
