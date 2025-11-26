@@ -23,7 +23,7 @@ TEMPLATE_DIR=BASE_DIR/'templates'
 SECRET_KEY = 'django-insecure-m@a$)3*p43%yl@*j9)-i0fnsb#-8_=7_lizipaf180=sao0hq0'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = [
     'cityxplore.onrender.com',
